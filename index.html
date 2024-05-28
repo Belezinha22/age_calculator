@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor | Age calculator app</title>
+    <link rel="shortcut icon" href="../../../assets/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="main">
+        <form id= "AgeForm" action="" method="post">
+            <div class="form-container">
+                <div class="form-group">
+                    <label for="Day">
+                        Day
+                    </label>
+                    <input type="number" name="" id="Day" placeholder="DD" class="input">
+
+                    <label for="Day" class="error_labelD error_label">
+                        Must be a valid day
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label for="Month">
+                        Month
+                    </label>
+                    <input type="number" name="" id="Month" placeholder="MM" class="input">
+                    <label for="Month" class="error_labelM error_label">
+                        Must be a valid month
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label for="Year">
+                        Year
+                    </label>
+                    <input type="number" name="" id="Year" placeholder="YYYY" class="input">
+                    <label for="Year" class="error_labelY error_label">
+                        Must be in the past
+                    </label>
+                </div>
+                
+                <hr>
+                <button type="submit" class="arrow" id="submit_form">
+                        <img src="../../../assets/images/icon-arrow.svg" alt="">
+                </button>
+            </div>
+        </form>
+
+        
+        <div class="show_age">
+            <h1>
+                <b id="show_year">
+                    --
+                </b>
+                years
+            </h1>
+            <h1>
+                <b id="show_month">
+                    --
+                </b>
+                months
+            </h1>
+            <h1>
+                <b id="show_day">
+                    --
+                </b>
+                days
+            </h1>
+        </div>
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+</html>

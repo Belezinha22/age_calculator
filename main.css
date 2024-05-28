@@ -1,0 +1,124 @@
+
+
+html{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: hsl(0, 0%, 94%);
+    font-family: 'Poppins' , sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 810px;
+    height: 580px;
+    background-color: white;
+    border-radius: 10px 10px 250px 10px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.form-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-group{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: calc(18% - 20px);
+}
+
+.form-group label {
+    width: 100px;
+    margin: 0px 0px 0px 0px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+input.input{
+    outline: none;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    transition: all .3s ease-in-out;
+}
+
+input::placeholder{
+    color: black;
+    opacity: 50%;
+    font-weight: bold;
+}
+
+.form-group input[type="number"] {
+    width: 100px;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+hr{
+    background-color: black;
+    width: 80%;
+    height: .3px;
+    margin-top: 50px;
+    margin-left: 10px;
+    opacity: 40%;
+}
+
+.arrow{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: hsl(259, 100%, 65%);
+    transform: translateX(-110px);
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    transition: border .3s ease-in-out;
+    cursor: pointer;
+}
+
+.arrow:hover{
+    border: 1px solid black;
+}
+
+b{
+    color: hsl(259, 100%, 65%);
+    font-size: 90px;
+}
+
+h1{
+    margin: -20px;
+    margin-left: 20px;
+    font-size: 90px;
+    font-family: tahoma;
+}
+
+.error_label{
+    color: red;
+    font-size: 8px;
+    font-family: sans-serif;
+    display: none;
+}
