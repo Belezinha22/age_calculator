@@ -9,8 +9,6 @@ body{
     background-color: hsl(0, 0%, 94%);
     font-family: 'Poppins' , sans-serif;
     display: flex;
-    align-items: center;
-    justify-content: center;
     height: 100vh;
     margin: 0;
 }
@@ -118,7 +116,8 @@ h1{
 
 .error_label{
     color: red;
-    font-size: 8px;
+    font-size: 9px;
     font-family: sans-serif;
     display: none;
 }
+
