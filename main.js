@@ -6,23 +6,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
         var maxDiaMes = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
-        var error_label = document.getElementsByClassName('error-label')[0]
+         if (isNaN(user_year) || isNaN(user_month) || isNaN(user_day) || user_year < 0 || user_month > 12 || user_day <1 || user_day > maxDiaMes[user_month -1]) {
 
-        if (user_day > 30 && user_month == 4) {
-            alert(" O mes 4(Abril ) possui apenas 30 dias")
-            return
-        } 
-        else if (isNaN(user_year) || isNaN(user_month) || isNaN(user_day) || user_year < 0 || user_month > 12 || user_day <1 || user_day > maxDiaMes[user_month -1]) {
-
-            alert("erro1")
-            document.getElementById('show_year').innerText = "--";
-            document.getElementById('show_month').innerText = "--";
-            document.getElementById('show_day').innerText = "--";
-            if (user_day >maxDiaMes[user_month - 1]) {
-                error_label.style.display = 'block'
+            if(isNaN(user_year) || user_year< 0){
+                document.getElementById('Year').style.border = '1px solid red'
+                document.getElementById('error_labelY').style.display = 'block'
+            }
+            if(isNaN(user_month) || user_month > 12){
+                document.getElementById('Month').style.border = '1px solid red'
+                document.getElementById('error_labelM').style.display = 'block'
+            }
+            if(isNaN(user_day) || user_day < 1 || maxDiaMes[user_month - 1]){
+                document.getElementById('Day').style.border = '1px solid red'
+                document.getElementById('error_labelD').style.display = 'block'
+            }
+            
+            else{
+                document.getElementById('error_labelY').style.display = 'none'
+                document.getElementById('error_labelM').style.display = 'none'
+                document.getElementById('error_labelD').style.display = 'none'
+                document.getElementById('show_age').innerText = "--"
             }
             return
-
         }
 
         if (user_year != "" && user_month != "" && user_day != "") {
@@ -31,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
             var today_month = new Date().getMonth() + 1; 
             var today_day = new Date().getDate();
 
+            
             var age_years = today_year - user_year;
             var age_months = today_month - user_month;
             var age_days = today_day - user_day;
@@ -57,3 +63,4 @@ document.addEventListener("DOMContentLoaded", function () {
 document.getElementById('AgeForm').addEventListener('submit', function (event) {
     event.preventDefault()
 })
+
